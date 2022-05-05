@@ -33,13 +33,7 @@ class Config(object):
     
     # set maximum file size for preventing overload (Optional)
     MAX_FILE_SIZE = os.environ.get("MAX_FILE_SIZE")
-    
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
-    AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "").split())
-    DB_URL = os.environ.get("DB_URL", "")
-    DB_NAME = os.environ.get("DB_NAME", "BroadcastBot")
-    BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", True))
-    
+       
     # add admins Id list by space seperated (Optional)
     ADMINS = list(set(int(x) for x in os.environ.get("ADMINS", "0").split()))
     if ADMINS:
