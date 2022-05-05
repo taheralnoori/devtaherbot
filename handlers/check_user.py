@@ -3,17 +3,14 @@
 
 import datetime
 
+import config
 import logging
 
 from handlers.database import Database
 
-from fpdf import FPDF
-from pdf import PROCESS
-from pyrogram import filters
-from Configs.dm import Config
-from pyrogram import Client as ILovePDF
-from pyrogram.types import InlineKeyboardButton
-from pyrogram.types import InlineKeyboardMarkup
+DB_URL = config.DB_URL
+DB_NAME = config.DB_NAME
+LOG_CHANNEL = config.LOG_CHANNEL
 
 db = Database(DB_URL, DB_NAME)
 
