@@ -2,18 +2,26 @@ import os
 import traceback
 import logging
 
-from fpdf import FPDF
-from pdf import PROCESS
+from pyrogram import Client
+from pyrogram import StopPropagation, filters
+from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import filters
 from Configs.dm import Config
 from pyrogram import Client as ILovePDF
-from pyrogram.types import InlineKeyboardButton
-from pyrogram.types import InlineKeyboardMarkup
 
+import config
 from handlers.check_user import handle_user_status
 from handlers.database import Database
 
+LOG_CHANNEL = config.LOG_CHANNEL
+AUTH_USERS = config.AUTH_USERS
+DB_URL = config.DB_URL
+DB_NAME = config.DB_NAME
+
 db = Database(DB_URL, DB_NAME)
+
+
+
 
 @ILovePDF.on_message(filters.private)
 async def _(bot, cmd):
