@@ -13,7 +13,7 @@ from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineKeyboardMarkup
 import requests
 
-@ILovePDF.on_message(filters.private & ~filters.command(["start"]) & ~filters.command(["id"]) & ~filters.command(["txt2pdf"]) & ~filters.command(["exit"]) & ~filters.command(["/stats"]) & ~filters.command(["speedtext"]))
+@ILovePDF.on_message(filters.private & ~filters.command(["start"]) & ~filters.command(["id"]) & ~filters.command(["txt2pdf"]) & ~filters.command(["exit"]) & ~filters.command(["/stats"]) & ~filters.command(["speedtext"]) & ~filters.command(["/"]))
 async def text(bot, message):
     text = str(message.text)
     chat_id = int(message.chat.id)
