@@ -134,7 +134,7 @@ the extracted PDF-images..</em>
     ╰────Railways──〄
 
 ### deploy on heroku:
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/tshergh/taherbotele)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/taheralnoori/devtaherbot)
 
 ## Project setUp:
 
