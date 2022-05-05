@@ -8,10 +8,7 @@ from pdf import PROCESS
 from pyrogram import filters
 from Configs.dm import Config
 from pyrogram import Client as ILovePDF
-from pyrogram.types import InlineKeyboardButton
-from pyrogram.types import InlineKeyboardMarkup
-
-
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
 @ILovePDF.on_message(filters.private & filters.text)
 async def link_extract(self, m: Message):
